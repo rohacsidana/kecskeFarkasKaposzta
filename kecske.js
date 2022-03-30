@@ -11,26 +11,20 @@ function $1(elem) {
 var tombSrc = []
 function init() {
     footer()
-
-    tombKiir()
-
     var tombImg = $("img")
     for (let i = 0; i < tombImg.length; i++) {
-        tombImg[i].addEventListener("click", tombKiir(tombImg[i]))
+        tombImg[i].addEventListener("click", tombKiir)
         tombImg[i].addEventListener("mouseover", hover)
         tombImg[i].addEventListener("mouseout", hoverOff)
     }
-    for (let i = 0; i < tombSrc.length; i++) {
-        console.log(tombSrc[i])
-    }
-
+    console.log(tombSrc)
 }
 function footer() {
     $1("footer p").innerHTML = "Rohácsi Dana"
     $1("footer p").style.textAlign = "center"
 }
-function tombKiir(elem) {
-    tombSrc.push(elem)
+function tombKiir() {
+    tombSrc.push(event.target.src)
 }
 function hover() {
     event.target.className += " kiemel"
