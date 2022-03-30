@@ -31,7 +31,6 @@ function harmadikFl() {
         tombImg[i].addEventListener("mouseover", hover)
         tombImg[i].addEventListener("mouseout", hoverOff)
     }
-
 }
 function hover() {
     event.target.className += " kiemel"
@@ -39,8 +38,11 @@ function hover() {
 function hoverOff() {
     event.target.className = ""
 }
+var csonakTele = false
+
 function baloldaliKepek() {
     var balKepek = $("#bal img")
+
     for (let i = 0; i < balKepek.length; i++) {
         balKepek[i].addEventListener("click", eltuntet)
         balKepek[i].addEventListener("click", csonakbaTesz)
@@ -51,6 +53,15 @@ function eltuntet() {
     event.target.removeEventListener("mouseout", hoverOff)
     event.target.addEventListener("click", csonakbaTesz)
 }
+
 function csonakbaTesz() {
-    ID("csonak").innerHTML += "<img src=" + event.target.src + " alt=" + event.target.alt + ">"
+    if (csonakTele == false) {
+        ID("csonak").innerHTML += "<img src=" + event.target.src + " alt=" + event.target.alt + ">"
+        csonakTele = true
+        event.target.removeEventListener("click", eltuntet)
+    }
+    else {
+        alert("TELE A CSÓNAK")
+        event.target.className = ""
+    }
 }
