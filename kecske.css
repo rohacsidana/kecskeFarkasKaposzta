@@ -7,7 +7,7 @@ header {
   padding: 10px;
   margin: 10px;
 }
-#bal img {
+#bal img ,#jobb img{
   max-width: 120px;
 }
 .kiemel {
@@ -24,6 +24,7 @@ main {
     "as1 ar as2"
     "f f f";
   grid-template-columns: 1fr 3fr 1fr;
+
 }
 header {
   grid-area: h;
@@ -42,6 +43,7 @@ article {
   height: 500px;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: rgb(142, 250, 250);
 }
 article img {
   max-width: 200px;
