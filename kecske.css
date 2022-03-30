@@ -1,12 +1,12 @@
-body,
 article,
 aside,
 footer,
 header {
   border: 1px solid black;
   padding: 10px;
+  margin: 10px;
 }
-img {
+#bal img {
   max-width: 100px;
 }
 .kiemel {
@@ -15,4 +15,28 @@ img {
 }
 .displaynone {
   display: none;
+}
+main {
+  display: grid;
+  grid-template-areas:
+    "h h h"
+    "as1 ar as2"
+    "f f f";
+}
+header {
+  grid-area: h;
+}
+#bal {
+  grid-area: as1;
+}
+#jobb {
+  grid-area: as2;
+}
+article {
+  grid-area: ar;
+  display: flex;
+  justify-content: center;
+}
+footer{
+    grid-area: f;
 }
