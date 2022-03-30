@@ -1,3 +1,4 @@
+main,
 article,
 aside,
 footer,
@@ -22,6 +23,7 @@ main {
     "h h h"
     "as1 ar as2"
     "f f f";
+  grid-template-columns: 1fr 3fr 1fr;
 }
 header {
   grid-area: h;
@@ -36,7 +38,14 @@ article {
   grid-area: ar;
   display: flex;
   justify-content: center;
+  background-image: url("kepek/csonak.png");
+  height: 500px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-footer{
-    grid-area: f;
+article img {
+  max-width: 200px;
+}
+footer {
+  grid-area: f;
 }

@@ -10,7 +10,6 @@ function $1(elem) {
 }
 var tombSrc = []
 function init() {
-    ID("csonak").innerHTML += `<img src="kepek/csonak.png" alt="csonak">`
     footer()
     harmadikFl()
     baloldaliKepek()
@@ -43,18 +42,15 @@ function hoverOff() {
 function baloldaliKepek() {
     var balKepek = $("#bal img")
     for (let i = 0; i < balKepek.length; i++) {
-
         balKepek[i].addEventListener("click", eltuntet)
-
+        balKepek[i].addEventListener("click", csonakbaTesz)
     }
 }
 function eltuntet() {
     event.target.className = "displaynone"
-    event.target.removeEventListener("click", tombKiir)
-    event.target.removeEventListener("mouseover", hover)
     event.target.removeEventListener("mouseout", hoverOff)
-
+    event.target.addEventListener("click", csonakbaTesz)
 }
 function csonakbaTesz() {
-    $1("article").innerHTML += event.target
+    ID("csonak").innerHTML += "<img src=" + event.target.src + " alt=" + event.target.alt + ">"
 }
