@@ -11,6 +11,17 @@ function $1(elem) {
 var tombSrc = []
 function init() {
     footer()
+    masodikFeladat()
+}
+function footer() {
+    $1("footer p").innerHTML = "Rohácsi Dana"
+    $1("footer p").style.textAlign = "center"
+    $1("footer p").style.fontSize = "20px"
+}
+function tombKiir() {
+    tombSrc.push(event.target.src)
+}
+function masodikFeladat() {
     var tombImg = $("img")
     for (let i = 0; i < tombImg.length; i++) {
         tombImg[i].addEventListener("click", tombKiir)
@@ -18,13 +29,6 @@ function init() {
         tombImg[i].addEventListener("mouseout", hoverOff)
     }
     console.log(tombSrc)
-}
-function footer() {
-    $1("footer p").innerHTML = "Rohácsi Dana"
-    $1("footer p").style.textAlign = "center"
-}
-function tombKiir() {
-    tombSrc.push(event.target.src)
 }
 function hover() {
     event.target.className += " kiemel"

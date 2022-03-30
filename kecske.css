@@ -1,11 +1,18 @@
-body, article, aside, footer,header{
+body,
+article,
+aside,
+footer,
+header {
   border: 1px solid black;
   padding: 10px;
 }
-img{
-    max-width: 100px;
+img {
+  max-width: 100px;
 }
-.kiemel{
-    border: 2px solid red;
-    cursor: grab;
+.kiemel {
+  border: 2px solid red;
+  cursor: grab;
+}
+.displaynone {
+  display: none;
 }
